@@ -1,0 +1,23 @@
+<p>
+  <b>Role:</b>
+  <%=h @role_permission.role_id %>
+</p>
+
+<p>
+  <b>Permission:</b>
+  <%=h @role_permission.permission_id %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @role_permission.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @role_permission.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_role_permission_path(@role_permission) %> |
+<%= link_to 'Back', role_permissions_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  addr: MyString
+  state_id: 1
+  zip: 
+  desc: MyString
+  gps_lat: 1.5
+  gps_lon: 1.5
+  created_userid: MyString
+  last_updt_userid: MyString
+
+two:
+  addr: MyString
+  state_id: 1
+  zip: 
+  desc: MyString
+  gps_lat: 1.5
+  gps_lon: 1.5
+  created_userid: MyString
+  last_updt_userid: MyString

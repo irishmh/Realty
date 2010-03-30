@@ -1,0 +1,43 @@
+<p>
+  <b>Addr:</b>
+  <%=h @property.addr %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @property.state_id %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @property.zip %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @property.desc %>
+</p>
+
+<p>
+  <b>Gps lat:</b>
+  <%=h @property.gps_lat %>
+</p>
+
+<p>
+  <b>Gps lon:</b>
+  <%=h @property.gps_lon %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @property.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @property.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

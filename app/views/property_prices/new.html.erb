@@ -1,0 +1,27 @@
+<h1>New property_price</h1>
+
+<% form_for(@property_price) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :property_id %><br />
+    <%= f.text_field :property_id %>
+  </p>
+  <p>
+    <%= f.label :property_price %><br />
+    <%= f.text_field :property_price %>
+  </p>
+  <p>
+    <%= f.label :created_userid %><br />
+    <%= f.text_field :created_userid %>
+  </p>
+  <p>
+    <%= f.label :last_updt_userid %><br />
+    <%= f.text_field :last_updt_userid %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', property_prices_path %>

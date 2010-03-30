@@ -1,0 +1,23 @@
+<p>
+  <b>Contact type:</b>
+  <%=h @contact.contact_type_id %>
+</p>
+
+<p>
+  <b>Contact data:</b>
+  <%=h @contact.contact_data %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @contact.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @contact.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

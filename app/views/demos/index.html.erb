@@ -1,0 +1,34 @@
+<h1>Listing demos</h1>
+
+<table>
+  <tr>
+    <th>Role</th>
+    <th>Name</th>
+    <th>Addr</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Created userid</th>
+    <th>Last updt userid</th>
+  </tr>
+
+<% @demos.each do |demo| %>
+  <tr>
+    <td><%=h demo.role_id %></td>
+    <td><%=h demo.name %></td>
+    <td><%=h demo.addr %></td>
+    <td><%=h demo.city %></td>
+    <td><%=h demo.state_id %></td>
+    <td><%=h demo.zip %></td>
+    <td><%=h demo.created_userid %></td>
+    <td><%=h demo.last_updt_userid %></td>
+    <td><%= link_to 'Show', demo %></td>
+    <td><%= link_to 'Edit', edit_demo_path(demo) %></td>
+    <td><%= link_to 'Destroy', demo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New demo', new_demo_path %>

@@ -1,0 +1,33 @@
+<p>
+  <b>Property:</b>
+  <%=h @property_detail.property_id %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%=h @property_detail.pic %>
+</p>
+
+<p>
+  <b>Pic seq:</b>
+  <%=h @property_detail.pic_seq %>
+</p>
+
+<p>
+  <b>Pic desc:</b>
+  <%=h @property_detail.pic_desc %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @property_detail.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @property_detail.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_detail_path(@property_detail) %> |
+<%= link_to 'Back', property_details_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  contact_type_id: 1
+  contact_data: MyString
+  created_userid: MyString
+  last_updt_userid: MyString
+
+two:
+  contact_type_id: 1
+  contact_data: MyString
+  created_userid: MyString
+  last_updt_userid: MyString

@@ -1,0 +1,23 @@
+<p>
+  <b>Role type cd:</b>
+  <%=h @role_type.role_type_cd %>
+</p>
+
+<p>
+  <b>Role desc:</b>
+  <%=h @role_type.role_desc %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @role_type.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @role_type.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_role_type_path(@role_type) %> |
+<%= link_to 'Back', role_types_path %>

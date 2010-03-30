@@ -1,0 +1,28 @@
+<h1>Editing role_type</h1>
+
+<% form_for(@role_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :role_type_cd %><br />
+    <%= f.text_field :role_type_cd %>
+  </p>
+  <p>
+    <%= f.label :role_desc %><br />
+    <%= f.text_field :role_desc %>
+  </p>
+  <p>
+    <%= f.label :created_userid %><br />
+    <%= f.text_field :created_userid %>
+  </p>
+  <p>
+    <%= f.label :last_updt_userid %><br />
+    <%= f.text_field :last_updt_userid %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @role_type %> |
+<%= link_to 'Back', role_types_path %>

@@ -1,0 +1,33 @@
+<p>
+  <b>Demo:</b>
+  <%=h @demo_contact.demo_id %>
+</p>
+
+<p>
+  <b>Preferred seq:</b>
+  <%=h @demo_contact.preferred_seq %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%=h @demo_contact.contact_id %>
+</p>
+
+<p>
+  <b>Contact data:</b>
+  <%=h @demo_contact.contact_data %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @demo_contact.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @demo_contact.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_demo_contact_path(@demo_contact) %> |
+<%= link_to 'Back', demo_contacts_path %>

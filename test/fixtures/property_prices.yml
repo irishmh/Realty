@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  property_id: 1
+  property_price: 9.99
+  created_userid: MyString
+  last_updt_userid: MyString
+
+two:
+  property_id: 1
+  property_price: 9.99
+  created_userid: MyString
+  last_updt_userid: MyString

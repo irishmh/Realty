@@ -1,0 +1,34 @@
+<h1>Listing properties</h1>
+
+<table>
+  <tr>
+    <th>Addr</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Desc</th>
+    <th>Gps lat</th>
+    <th>Gps lon</th>
+    <th>Created userid</th>
+    <th>Last updt userid</th>
+  </tr>
+
+<% @properties.each do |property| %>
+  <tr>
+    <td><%=h property.addr %></td>
+    <td><%=h property.state_id %></td>
+    <td><%=h property.zip %></td>
+    <td><%=h property.desc %></td>
+    <td><%=h property.gps_lat %></td>
+    <td><%=h property.gps_lon %></td>
+    <td><%=h property.created_userid %></td>
+    <td><%=h property.last_updt_userid %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New property', new_property_path %>

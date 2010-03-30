@@ -1,0 +1,2 @@
+module DemoContactsHelper
+end

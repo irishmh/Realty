@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  status_id: 1
+  eff_timestamp: 2010-03-29 21:46:42
+  exp_timestamp: 2010-03-29 21:46:42
+  created_userid: MyString
+  last_updt_userid: MyString
+
+two:
+  status_id: 1
+  eff_timestamp: 2010-03-29 21:46:42
+  exp_timestamp: 2010-03-29 21:46:42
+  created_userid: MyString
+  last_updt_userid: MyString

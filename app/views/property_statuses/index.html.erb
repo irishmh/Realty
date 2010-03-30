@@ -1,0 +1,28 @@
+<h1>Listing property_statuses</h1>
+
+<table>
+  <tr>
+    <th>Status</th>
+    <th>Eff timestamp</th>
+    <th>Exp timestamp</th>
+    <th>Created userid</th>
+    <th>Last updt userid</th>
+  </tr>
+
+<% @property_statuses.each do |property_status| %>
+  <tr>
+    <td><%=h property_status.status_id %></td>
+    <td><%=h property_status.eff_timestamp %></td>
+    <td><%=h property_status.exp_timestamp %></td>
+    <td><%=h property_status.created_userid %></td>
+    <td><%=h property_status.last_updt_userid %></td>
+    <td><%= link_to 'Show', property_status %></td>
+    <td><%= link_to 'Edit', edit_property_status_path(property_status) %></td>
+    <td><%= link_to 'Destroy', property_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New property_status', new_property_status_path %>

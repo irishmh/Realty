@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  role_type_cd: 
+  role_desc: MyString
+  created_userid: MyString
+  last_updt_userid: MyString
+
+two:
+  role_type_cd: 
+  role_desc: MyString
+  created_userid: MyString
+  last_updt_userid: MyString

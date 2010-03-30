@@ -1,0 +1,18 @@
+<p>
+  <b>Permission desc:</b>
+  <%=h @permission.permission_desc %>
+</p>
+
+<p>
+  <b>Created userid:</b>
+  <%=h @permission.created_userid %>
+</p>
+
+<p>
+  <b>Last updt userid:</b>
+  <%=h @permission.last_updt_userid %>
+</p>
+
+
+<%= link_to 'Edit', edit_permission_path(@permission) %> |
+<%= link_to 'Back', permissions_path %>

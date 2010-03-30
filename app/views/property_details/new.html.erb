@@ -1,0 +1,35 @@
+<h1>New property_detail</h1>
+
+<% form_for(@property_detail) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :property_id %><br />
+    <%= f.text_field :property_id %>
+  </p>
+  <p>
+    <%= f.label :pic %><br />
+    <%= f.text_field :pic %>
+  </p>
+  <p>
+    <%= f.label :pic_seq %><br />
+    <%= f.text_field :pic_seq %>
+  </p>
+  <p>
+    <%= f.label :pic_desc %><br />
+    <%= f.text_field :pic_desc %>
+  </p>
+  <p>
+    <%= f.label :created_userid %><br />
+    <%= f.text_field :created_userid %>
+  </p>
+  <p>
+    <%= f.label :last_updt_userid %><br />
+    <%= f.text_field :last_updt_userid %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', property_details_path %>

@@ -1,0 +1,27 @@
+<h1>New role_permission</h1>
+
+<% form_for(@role_permission) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :role_id %><br />
+    <%= f.text_field :role_id %>
+  </p>
+  <p>
+    <%= f.label :permission_id %><br />
+    <%= f.text_field :permission_id %>
+  </p>
+  <p>
+    <%= f.label :created_userid %><br />
+    <%= f.text_field :created_userid %>
+  </p>
+  <p>
+    <%= f.label :last_updt_userid %><br />
+    <%= f.text_field :last_updt_userid %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', role_permissions_path %>
