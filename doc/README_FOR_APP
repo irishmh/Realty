@@ -1,2 +1,155 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+ROR - class 11 site build:  (Basic's needed for Class 12 4/6/2010)
+
+This is the README document for Maureen Higgins' Demo Realty site developed using Ruby on Rails.   
+
+The site will allow anyone interested in viewing real estate listings to browse or search the current database 
+properties as well as a secured maintence of properties and owners for the realtors. 
+ 
+- Demographic information (name, address, etc) will be maintained for property owners, clients and real estate 
+agents
+
+- Contact information will be maintained for each demographic account.  Codes will be used to identify the contact 
+type (phone, email etc.) that identify the data stored as contact_data (the wire or cell phone number; the email 
+address, or if physical mail is preferred, the contact_data wll be nil and the Demo address utilized).   
+
+- The demographic and contact information will be associated viathe Demo_Contact table that will retain each contact 
+point for the person as well as allow them to set a preference as to the sequence of which contact to be made first,
+second, etc. 
+
+- Property_Location, description, asking price, GPS cooordinates, pictures (and possibly movies) with associated 
+descriptions and display sequences will be stored in a database & be viewable for each property.  Authorized 
+personnel will have the ability to maintain this data as well as view/maintain additional data that will not be 
+visable to clients, such as minimum price and historic listing prices Property_Owner name, address, phone, and 
+email information will be maintained as a relationship link between the property itself and the owner's demographic 
+information.
+
+- Property_Detail will retain pictures with associated naratives and display sequences for each property.
+
+- Property_Price will retain both current and historic prices for each Property.  It will also retain the property 
+status.
+
+- Property_Owner will be maintained as a relationship link between the property itself and it's owner(s).
+
+- The Notes table will be optionally associated with each table in the database to enable notes be retained and 
+associated to one or more of the table's information.
+
+- All tables retain created and last-updated userid's (in addition to Ruby's timestamps) to facilitate lifecycle 
+tracking to parties responsible for it's maintenance. 
+
+
+
+Database narrative for the Demo Realty site:
+
+Class			table		data type
+role_type		role_types	
+	role_type_cd			char(1), e.g.: A(gent); C(client); O(owner); 
+	role_desc			string
+	created_userid			string
+	last_updt_userid			string	
+
+role			roles		
+	role_type_id			int			 
+	role_desc			string
+	created_userid			string
+	last_updt_userid			string	
+
+permission		permssions
+	permission_desc		string
+	created_userid			string
+	last_updt_userid			string
+
+role_permission		role_permissions
+	role_id				int
+	permission_id			int
+	created_userid			string
+	last_updt_userid			string
+
+state			states
+	state_cd			char(2)
+	state_name			string
+	created_userid			string
+	last_updt_userid			string
+
+demo (demographic)	demos
+	role_id		1:1 
+	name				string
+	addr				string
+	city				string
+	state_id				int
+	zip				char(9)
+	created_userid			string
+	last_updt_userid			string
+
+contact_type		contact_types
+	contact_type_cd		char(1), e.g: E(email); C(cell-phone); 
+						       P(wire-phone); S(snail-mail);
+	contact_type_desc		string
+	created_userid			string
+	last_updt_userid			string
+
+contact			contacts
+	contact_type_id			1:1		
+	contact_data			string
+	created_userid			string
+	last_updt_userid			string	
+
+demo_contact		demo_contacts
+	demo_id	1:m		int
+	preferred_seq			int
+	contact_id	m:1		int
+	created_userid			string
+	last_updt_userid			string
+
+property		properties
+	addr				string
+	state_id		1:1		int
+	zip 				char(9)
+	desc				string
+	GPS_lat			float
+	GPS_lon			float
+	created_userid			string
+	last_updt_userid			string
+
+property_detail		property_details
+	property_id	1:m
+	pic				blob
+	pic_seq				Int
+	pic_desc			string
+	created_userid			string
+	last_updt_userid			string
+
+property_price		property_prices	
+	property_id	1:m
+	property_price			decimal, :precision => 8, :scale => 2, :default => 0
+	created_userid			string
+	last_updt_userid			string
+
+status			status		
+	status_cd			char(1), e.g: A(active); I(inactive); 
+								     S(sold); P(ending sale)
+	status_desc			string
+
+property_status		property_statuses
+	status_id			integer
+	eff_timestamp			datetime
+	exp_timestamp			datetime
+	created_userid			string
+	last_updt_userid			string		
+	
+property_owner		property_owners
+	property_id	m:m		
+	demo_id	m:m
+	eff_timestamp			datetime
+	exp_timestamp			datetime
+
+	created_userid			string
+	last_updt_userid			string
+	
+note			notes
+	noteable_id			int
+	noteable_reference		string
+	notes_text			clob
+	eff_timestamp			time
+	exp_timestamp			time
+	created_userid			string
+	last_updt_userid			string
