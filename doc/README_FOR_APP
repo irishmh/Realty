@@ -3,7 +3,8 @@ ROR - class 11 site build:  (Basic's needed for Class 12 4/6/2010)
 This is the README document for Maureen Higgins' Demo Realty site developed using Ruby on Rails.   
 
 The site will allow anyone interested in viewing real estate listings to browse or search the current database 
-properties as well as a secured maintence of properties and owners for the realtors. 
+properties as well as a secured maintence of properties and owners for the realtors. The site default route 
+is directed to view the property listings. 
  
 - Demographic information (name, address, etc) will be maintained for property owners, clients and real estate 
 agents
@@ -41,76 +42,84 @@ tracking to parties responsible for it's maintenance.
 Database narrative for the Demo Realty site:
 
 Class			table		data type
-role_type		role_types	
-	role_type_cd			char(1), e.g.: A(gent); C(client); O(owner); 
+role_type		role_types		belongs_to :role
+	role_type_cd			string :length =>1, 
+						e.g.: A(gent); C(client); O(owner); 
 	role_desc			string
 	created_userid			string
 	last_updt_userid			string	
 
-role			roles		
+role			roles			has_one:role_type
+						belongs_to:demo	
 	role_type_id			int			 
 	role_desc			string
 	created_userid			string
 	last_updt_userid			string	
 
-permission		permssions
+permission		permssions		belongs_to:role_permission
 	permission_desc		string
 	created_userid			string
 	last_updt_userid			string
 
-role_permission		role_permissions
+role_permission		role_permissions	has_one:role
+						has_one:permission
 	role_id				int
 	permission_id			int
 	created_userid			string
 	last_updt_userid			string
 
-state			states
-	state_cd			char(2)
+state			states			belongs_to:demo
+						belongs_to:property
+	state_cd			string, length =>1
 	state_name			string
 	created_userid			string
 	last_updt_userid			string
 
-demo (demographic)	demos
+demo (demographic)	demos			has_one:role
 	role_id		1:1 
 	name				string
 	addr				string
 	city				string
 	state_id				int
-	zip				char(9)
+	zip				string, length => 9
 	created_userid			string
 	last_updt_userid			string
 
-contact_type		contact_types
-	contact_type_cd		char(1), e.g: E(email); C(cell-phone); 
+contact_type		contact_types		belongs_to:contact
+	contact_type_cd			string, length =>1, 
+						e.g: E(email); C(cell-phone); 
 						       P(wire-phone); S(snail-mail);
 	contact_type_desc		string
 	created_userid			string
 	last_updt_userid			string
 
-contact			contacts
+contact			contacts		has_one:contact_type	
 	contact_type_id			1:1		
 	contact_data			string
 	created_userid			string
 	last_updt_userid			string	
 
-demo_contact		demo_contacts
+demo_contact		demo_contacts		has_one:demo
+						has_many:contacts
 	demo_id	1:m		int
 	preferred_seq			int
 	contact_id	m:1		int
 	created_userid			string
 	last_updt_userid			string
 
-property		properties
+property		properties			site's default route
+						has_one:state
+						has_many:property_details
 	addr				string
 	state_id		1:1		int
-	zip 				char(9)
+	zip 				string, length =>9
 	desc				string
 	GPS_lat			float
 	GPS_lon			float
 	created_userid			string
 	last_updt_userid			string
 
-property_detail		property_details
+property_detail		property_details		has_one:property
 	property_id	1:m
 	pic				blob
 	pic_seq				Int
@@ -118,25 +127,28 @@ property_detail		property_details
 	created_userid			string
 	last_updt_userid			string
 
-property_price		property_prices	
+property_price		property_prices		has_one:property
 	property_id	1:m
 	property_price			decimal, :precision => 8, :scale => 2, :default => 0
 	created_userid			string
 	last_updt_userid			string
 
-status			status		
-	status_cd			char(1), e.g: A(active); I(inactive); 
+status			status			belongs_to:property_status	
+	status_cd			string, length =>2
+						, e.g: A(active); I(inactive); 
 								     S(sold); P(ending sale)
 	status_desc			string
 
-property_status		property_statuses
+property_status		property_statuses	has_and_belongs_to_many:statuses
+						<<needs property_id>>
 	status_id			integer
 	eff_timestamp			datetime
 	exp_timestamp			datetime
 	created_userid			string
 	last_updt_userid			string		
 	
-property_owner		property_owners
+property_owner		property_owners		has_and_belongs_to_many:properties
+						has_and_belongs_to_many:demos
 	property_id	m:m		
 	demo_id	m:m
 	eff_timestamp			datetime
