@@ -6,7 +6,7 @@ class CreateDemos < ActiveRecord::Migration
       t.string :addr
       t.string :city
       t.integer :state_id
-      t.char   :zip
+      t.string :zip
       t.string :created_userid
       t.string :last_updt_userid
 

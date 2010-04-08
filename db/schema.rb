@@ -12,6 +12,7 @@
 ActiveRecord::Schema.define(:version => 20100330024850) do
 
   create_table "contact_types", :force => true do |t|
+    t.string   "contact_type_cd"
     t.string   "contact_type_desc"
     t.string   "created_userid"
     t.string   "last_updt_userid"
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
     t.string   "addr"
     t.string   "city"
     t.integer  "state_id"
+    t.string   "zip"
     t.string   "created_userid"
     t.string   "last_updt_userid"
     t.datetime "created_at"
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
   create_table "properties", :force => true do |t|
     t.string   "addr"
     t.integer  "state_id"
+    t.string   "zip"
     t.string   "desc"
     t.float    "gps_lat"
     t.float    "gps_lon"
@@ -121,6 +124,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
   end
 
   create_table "role_types", :force => true do |t|
+    t.string   "role_type_cd"
     t.string   "role_desc"
     t.string   "created_userid"
     t.string   "last_updt_userid"
@@ -138,6 +142,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
   end
 
   create_table "states", :force => true do |t|
+    t.string   "state_cd"
     t.string   "created_userid"
     t.string   "last_updt_userid"
     t.datetime "created_at"

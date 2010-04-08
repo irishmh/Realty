@@ -5,7 +5,8 @@
 
   <p>
     <%= f.label :role_type_id %><br />
-    <%= f.text_field :role_type_id %>
+    <!--%= f.text_field :role_type_id %-->
+    <%= f.select(:role_type_id, RoleType.all.collect{|t| [t.role_desc, t.id]}, {:include_blank => true}) %>
   </p>
   <p>
     <%= f.label :role_desc %><br />

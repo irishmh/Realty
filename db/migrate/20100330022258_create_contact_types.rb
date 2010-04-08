@@ -1,7 +1,7 @@
 class CreateContactTypes < ActiveRecord::Migration
   def self.up
     create_table :contact_types do |t|
-      t.char   :contact_type_cd
+      t.string :contact_type_cd
       t.string :contact_type_desc
       t.string :created_userid
       t.string :last_updt_userid

@@ -3,7 +3,7 @@ class CreateProperties < ActiveRecord::Migration
     create_table :properties do |t|
       t.string :addr
       t.integer :state_id
-      t.char :zip
+      t.string  :zip
       t.string :desc
       t.float :gps_lat
       t.float :gps_lon
