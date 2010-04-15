@@ -4,16 +4,12 @@
   <tr>
     <th>Role type</th>
     <th>Role desc</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @roles.each do |role| %>
   <tr>
     <td><%=h role.role_type_id %></td>
     <td><%=h role.role_desc %></td>
-    <td><%=h role.created_userid %></td>
-    <td><%=h role.last_updt_userid %></td>
     <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>
     <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>

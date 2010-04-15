@@ -1,6 +1,7 @@
 class CreatePropertyStatuses < ActiveRecord::Migration
   def self.up
     create_table :property_statuses do |t|
+      t.integer :property_id	
       t.integer :status_id
       t.datetime :eff_timestamp
       t.datetime :exp_timestamp

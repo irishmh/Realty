@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
   end
 
   create_table "property_statuses", :force => true do |t|
+    t.integer  "property_id"
     t.integer  "status_id"
     t.datetime "eff_timestamp"
     t.datetime "exp_timestamp"

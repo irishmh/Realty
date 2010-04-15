@@ -1,4 +1,5 @@
 class Demo < ActiveRecord::Base
-  has_one:role
-  belongs_to:demo
+  # has_one:role
+  belongs_to :role
+
 end

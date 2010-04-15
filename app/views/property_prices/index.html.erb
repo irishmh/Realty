@@ -1,19 +1,15 @@
-<h1>Listing property_prices</h1>
+<h1>List Property Prices</h1>
 
 <table>
   <tr>
     <th>Property</th>
     <th>Property price</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @property_prices.each do |property_price| %>
   <tr>
     <td><%=h property_price.property_id %></td>
     <td><%=h property_price.property_price %></td>
-    <td><%=h property_price.created_userid %></td>
-    <td><%=h property_price.last_updt_userid %></td>
     <td><%= link_to 'Show', property_price %></td>
     <td><%= link_to 'Edit', edit_property_price_path(property_price) %></td>
     <td><%= link_to 'Destroy', property_price, :confirm => 'Are you sure?', :method => :delete %></td>

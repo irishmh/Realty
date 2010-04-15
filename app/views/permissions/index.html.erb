@@ -10,8 +10,6 @@
 <% @permissions.each do |permission| %>
   <tr>
     <td><%=h permission.permission_desc %></td>
-    <td><%=h permission.created_userid %></td>
-    <td><%=h permission.last_updt_userid %></td>
     <td><%= link_to 'Show', permission %></td>
     <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
     <td><%= link_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>

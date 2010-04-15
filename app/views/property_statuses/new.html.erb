@@ -1,4 +1,4 @@
-<h1>New property_status</h1>
+<h1>New Property Status</h1>
 
 <% form_for(@property_status) do |f| %>
   <%= f.error_messages %>
@@ -6,22 +6,6 @@
   <p>
     <%= f.label :status_id %><br />
     <%= f.text_field :status_id %>
-  </p>
-  <p>
-    <%= f.label :eff_timestamp %><br />
-    <%= f.datetime_select :eff_timestamp %>
-  </p>
-  <p>
-    <%= f.label :exp_timestamp %><br />
-    <%= f.datetime_select :exp_timestamp %>
-  </p>
-  <p>
-    <%= f.label :created_userid %><br />
-    <%= f.text_field :created_userid %>
-  </p>
-  <p>
-    <%= f.label :last_updt_userid %><br />
-    <%= f.text_field :last_updt_userid %>
   </p>
   <p>
     <%= f.submit 'Create' %>

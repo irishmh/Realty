@@ -1,19 +1,15 @@
-<h1>Listing statuses</h1>
+<h1>List Statuses</h1>
 
 <table>
   <tr>
     <th>Status cd</th>
     <th>Status desc</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @statuses.each do |status| %>
   <tr>
     <td><%=h status.status_cd %></td>
     <td><%=h status.status_desc %></td>
-    <td><%=h status.created_userid %></td>
-    <td><%=h status.last_updt_userid %></td>
     <td><%= link_to 'Show', status %></td>
     <td><%= link_to 'Edit', edit_status_path(status) %></td>
     <td><%= link_to 'Destroy', status, :confirm => 'Are you sure?', :method => :delete %></td>

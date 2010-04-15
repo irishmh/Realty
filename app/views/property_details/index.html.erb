@@ -1,4 +1,4 @@
-<h1>Listing property_details</h1>
+<h1>List Property Details</h1>
 
 <table>
   <tr>
@@ -6,8 +6,6 @@
     <th>Pic</th>
     <th>Pic seq</th>
     <th>Pic desc</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @property_details.each do |property_detail| %>
@@ -16,8 +14,6 @@
     <td><%=h property_detail.pic %></td>
     <td><%=h property_detail.pic_seq %></td>
     <td><%=h property_detail.pic_desc %></td>
-    <td><%=h property_detail.created_userid %></td>
-    <td><%=h property_detail.last_updt_userid %></td>
     <td><%= link_to 'Show', property_detail %></td>
     <td><%= link_to 'Edit', edit_property_detail_path(property_detail) %></td>
     <td><%= link_to 'Destroy', property_detail, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,25 +1,25 @@
-<h1>Show Role Permission</h1>
+<h1>Show Role PermissionS</h1>
 
 <p>
   <b>Role:</b>
   <%=h @role_permission.role_id %>
+  <!--%=h @select(:role_id, Role.all.collect{|t| [t.role_desc, t.id]}, {:include_blank => true}) %-->
+  <!--%=h @ = Product.find(params[:id]) %-->
+  <!--%=h @ = Role.find(params[:role_permission.role_id])%-->
+  <!--%=h @Role.role_desc %-->
+  <!--%=h @Role.find_by_id(@role_permission.role_id) %-->
+  <!--%=h @Role.find_by_sql("select role_desc from role where role_id = role_permission.role_id" ) %-->
+  <!--%=h Role.find(:all, :conditions => { :role_type_id => role_permission.role_id }) %-->
+  <%=h @role = Role.find(params[:id ])
+        @role.role_desc %>
+
 </p>
 
 <p>
   <b>Permission:</b>
   <%=h @role_permission.permission_id %>
+  <!--%=h @select(:permission_id, Permission.all.collect{|t| [t.permission_desc, t.id]}, {:include_blank => true}) %-->
 </p>
-
-<p>
-  <b>Created userid:</b>
-  <%=h @role_permission.created_userid %>
-</p>
-
-<p>
-  <b>Last updt userid:</b>
-  <%=h @role_permission.last_updt_userid %>
-</p>
-
 
 <%= link_to 'Edit', edit_role_permission_path(@role_permission) %> |
 <%= link_to 'Back', role_permissions_path %>

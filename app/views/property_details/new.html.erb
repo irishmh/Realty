@@ -1,4 +1,4 @@
-<h1>New property_detail</h1>
+<h1>New Property Detail</h1>
 
 <% form_for(@property_detail) do |f| %>
   <%= f.error_messages %>
@@ -18,14 +18,6 @@
   <p>
     <%= f.label :pic_desc %><br />
     <%= f.text_field :pic_desc %>
-  </p>
-  <p>
-    <%= f.label :created_userid %><br />
-    <%= f.text_field :created_userid %>
-  </p>
-  <p>
-    <%= f.label :last_updt_userid %><br />
-    <%= f.text_field :last_updt_userid %>
   </p>
   <p>
     <%= f.submit 'Create' %>

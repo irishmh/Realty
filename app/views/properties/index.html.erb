@@ -1,4 +1,4 @@
-<h1>Listing properties</h1>
+<h1>List Properties</h1>
 
 <table>
   <tr>
@@ -8,8 +8,6 @@
     <th>Desc</th>
     <th>Gps lat</th>
     <th>Gps lon</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @properties.each do |property| %>
@@ -20,8 +18,6 @@
     <td><%=h property.desc %></td>
     <td><%=h property.gps_lat %></td>
     <td><%=h property.gps_lon %></td>
-    <td><%=h property.created_userid %></td>
-    <td><%=h property.last_updt_userid %></td>
     <td><%= link_to 'Show', property %></td>
     <td><%= link_to 'Edit', edit_property_path(property) %></td>
     <td><%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>

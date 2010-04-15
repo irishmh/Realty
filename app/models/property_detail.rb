@@ -1,3 +1,4 @@
 class PropertyDetail < ActiveRecord::Base
-  has_one:property
+  # has_one:property
+  belongs_to :property
 end

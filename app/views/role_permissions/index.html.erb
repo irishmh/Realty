@@ -4,16 +4,19 @@
   <tr>
     <th>Role</th>
     <th>Permission</th>
-    <th>Created userid</th>
-    <th>Last updt userid</th>
   </tr>
 
 <% @role_permissions.each do |role_permission| %>
   <tr>
-    <td><%=h role_permission.role_id %></td>
-    <td><%=h role_permission.permission_id %></td>
-    <td><%=h role_permission.created_userid %></td>
-    <td><%=h role_permission.last_updt_userid %></td>
+    <td><%=h role_permission.role_id %>
+        <!--%=h @id = role_permission.role_id
+             @role = Role.find(params[:id ]) 
+             @role.role_desc %-->
+    </td>
+    <td><%=h role_permission.permission_id %>
+         <!--%=h @permission = Permission.find(params[:id ]) 
+             @permission.permission_desc %-->
+    </td>
     <td><%= link_to 'Show', role_permission %></td>
     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
