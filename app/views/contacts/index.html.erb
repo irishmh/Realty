@@ -1,4 +1,6 @@
 <h1>Listing contacts</h1>
+<title>Contacts: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -10,7 +12,7 @@
 
 <% @contacts.each do |contact| %>
   <tr>
-    <td><%=h contact.contact_type_id %></td>
+    <!--td><%=h contact.contact_type %></td-->
     <td><%=h contact.contact_data %></td>
     <td><%= link_to 'Show', contact %></td>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>

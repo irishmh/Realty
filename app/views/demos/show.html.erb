@@ -1,8 +1,15 @@
 <h1>Show Demographics</h1>
+<title>Demographics: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <p>
   <b>Role:</b>
-  <%=h @demo.role_id %>
+  <%=h @demo.role.role_type.role_type_cd %>
+</p>
+
+<p>
+  <b>Role Desc:</b>
+  <%=h @demo.role.role_desc %>
 </p>
 
 <p>

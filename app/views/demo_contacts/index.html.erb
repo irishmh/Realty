@@ -1,4 +1,6 @@
-<h1>Listing demo_contacts</h1>
+<h1>List Demo Contacts</h1>
+<title>Demo Contacts: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -12,9 +14,9 @@
 
 <% @demo_contacts.each do |demo_contact| %>
   <tr>
-    <td><%=h demo_contact.demo_id %></td>
+    <td><%=h demo_contact.demo.name %></td>
     <td><%=h demo_contact.preferred_seq %></td>
-    <td><%=h demo_contact.contact_id %></td>
+    <!--td><%=h demo_contact.contact_id %></td-->
     <td><%=h demo_contact.contact_data %></td>
     <td><%= link_to 'Show', demo_contact %></td>
     <td><%= link_to 'Edit', edit_demo_contact_path(demo_contact) %></td>

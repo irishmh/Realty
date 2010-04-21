@@ -1,4 +1,6 @@
 <h1>List Property Statuses</h1>
+<title>Property Statuses: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -7,7 +9,9 @@
 
 <% @property_statuses.each do |property_status| %>
   <tr>
-    <td><%=h property_status.status_id %></td>
+    <td><%=h property_status.property.addr if property_status.property %></td>
+    <!--td><!--%=h property_status.status_cd %--><!--/td-->
+    <td><%=h property_status.status.status_desc if property_status.status  %></td>
     <td><%= link_to 'Show', property_status %></td>
     <td><%= link_to 'Edit', edit_property_status_path(property_status) %></td>
     <td><%= link_to 'Destroy', property_status, :confirm => 'Are you sure?', :method => :delete %></td>

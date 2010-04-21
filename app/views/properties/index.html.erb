@@ -1,4 +1,6 @@
 <h1>List Properties</h1>
+<title>Properties: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -13,7 +15,8 @@
 <% @properties.each do |property| %>
   <tr>
     <td><%=h property.addr %></td>
-    <td><%=h property.state_id %></td>
+    <td><%=h property.state.state_cd %></td>
+    <!--td><!--%=h property.state.state_name %--><!--/td-->
     <td><%=h property.zip %></td>
     <td><%=h property.desc %></td>
     <td><%=h property.gps_lat %></td>

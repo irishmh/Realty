@@ -1,11 +1,11 @@
 <h1>Show Permissions</h1>
+<title>Permissions: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <p>
   <b>Permission desc:</b>
   <%=h @permission.permission_desc %>
 </p>
-
-
 
 <%= link_to 'Edit', edit_permission_path(@permission) %> |
 <%= link_to 'Back', permissions_path %>

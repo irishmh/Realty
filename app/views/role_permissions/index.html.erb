@@ -1,4 +1,6 @@
 <h1>List Role Permissions</h1>
+<title>Role Permissions: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -8,12 +10,12 @@
 
 <% @role_permissions.each do |role_permission| %>
   <tr>
-    <td><%=h role_permission.role_id %>
+    <td><%=h role_permission.role.role_desc %>
         <!--%=h @id = role_permission.role_id
              @role = Role.find(params[:id ]) 
              @role.role_desc %-->
     </td>
-    <td><%=h role_permission.permission_id %>
+    <td><%=h role_permission.permission.permission_desc %>
          <!--%=h @permission = Permission.find(params[:id ]) 
              @permission.permission_desc %-->
     </td>

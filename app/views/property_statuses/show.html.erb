@@ -1,20 +1,16 @@
 <h1>Show Property Statuses</h1>
+<title>Property Statuses: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
+
+<p>
+  <b>Property:</b>
+  <%=h @property_status.property.addr if @property_status.property %>
+</p>
 
 <p>
   <b>Status:</b>
-  <%=h @property_status.status_id %>
+  <%=h @property_status.status.status_desc if @property_status.status  %>
 </p>
-
-<p>
-  <b>Eff timestamp:</b>
-  <%=h @property_status.eff_timestamp %>
-</p>
-
-<p>
-  <b>Exp timestamp:</b>
-  <%=h @property_status.exp_timestamp %>
-</p>
-
 
 <%= link_to 'Edit', edit_property_status_path(@property_status) %> |
 <%= link_to 'Back', property_statuses_path %>

@@ -1,4 +1,6 @@
 <h1>List Roles</h1>
+<title>Roles: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -8,7 +10,9 @@
 
 <% @roles.each do |role| %>
   <tr>
-    <td><%=h role.role_type_id %></td>
+    <!--td><!--%=h role.role_type_id %></td-->
+    <td><%=h role.role_type.role_type_cd %></td>
+
     <td><%=h role.role_desc %></td>
     <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>

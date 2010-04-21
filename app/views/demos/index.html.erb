@@ -1,4 +1,6 @@
 <h1>List Demographics</h1>
+<title>Demographics: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -14,7 +16,7 @@
 
 <% @demos.each do |demo| %>
   <tr>
-    <td><%=h demo.role_id %></td>
+    <td><%=h demo.role.role_desc %></td>
     <td><%=h demo.name %></td>
     <td><%=h demo.addr %></td>
     <td><%=h demo.city %></td>

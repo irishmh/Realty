@@ -1,11 +1,13 @@
 <h1>Edit Status</h1>
+<title>Status: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <% form_for(@status) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :status_cd %><br />
-    <%= f.text_field :status_cd %>
+    <!--%= f.label :status_cd %--><br />
+    <!--%= f.text_field :status_cd %-->
   </p>
   <p>
     <%= f.label :status_desc %><br />

@@ -1,7 +1,15 @@
 <h1>New Property Status</h1>
+<title>Property Status: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <% form_for(@property_status) do |f| %>
   <%= f.error_messages %>
+
+<p>
+    <%= f.label :property %><br />
+    <%= f.select(:property_id, Property.all.collect{|t| [t.addr, t.id]}, {:include_blank => true}) %>
+    </select>
+  </p>
 
   <p>
     <%= f.label :status_id %><br />

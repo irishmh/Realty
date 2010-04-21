@@ -1,4 +1,6 @@
 <h1>List Property Details</h1>
+<title>Property Details: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -10,8 +12,9 @@
 
 <% @property_details.each do |property_detail| %>
   <tr>
-    <td><%=h property_detail.property_id %></td>
-    <td><%=h property_detail.pic %></td>
+    <td><%=h property_detail.property.addr %></td>
+  
+    <td><!--%=h property_detail.pic %--></td>
     <td><%=h property_detail.pic_seq %></td>
     <td><%=h property_detail.pic_desc %></td>
     <td><%= link_to 'Show', property_detail %></td>

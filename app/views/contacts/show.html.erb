@@ -1,6 +1,15 @@
+<h1>Show Contacts</h1>
+<title>Contacts: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
+
 <p>
-  <b>Contact type:</b>
-  <%=h @contact.contact_type_id %>
+  <b>Contact type code:</b>
+  <%=h @contact.contact_type.contact_type_cd %>
+  </p>
+
+<p>
+  <b>Contact type desc:</b>
+  <%=h @contact.contact_type.contact_type_desc%>
 </p>
 
 <p>

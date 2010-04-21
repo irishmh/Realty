@@ -1,12 +1,15 @@
 <h1>Show Property Owners</h1>
+<title>Property Owners: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
+
 <p>
   <b>Property:</b>
-  <%=h @property_owner.property_id %>
+  <%=h @property_owner.property.addr %>
 </p>
 
 <p>
   <b>Demo:</b>
-  <%=h @property_owner.demo_id %>
+  <%=h @property_owner.demo.name %>
 </p>
 
 

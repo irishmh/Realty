@@ -1,9 +1,16 @@
 <h1>Show States</h1>
+<title>States: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
+
 <p>
   <b>State cd:</b>
   <%=h @state.state_cd %>
 </p>
 
+<!--p>
+  <b>State name:</b>
+  <!--%=h @state.state_name %-->
+<!--/p-->
 
 <%= link_to 'Edit', edit_state_path(@state) %> |
 <%= link_to 'Back', states_path %>

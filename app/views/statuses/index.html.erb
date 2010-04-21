@@ -1,14 +1,16 @@
 <h1>List Statuses</h1>
+<title>Statuses: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
-    <th>Status cd</th>
+    <!--<th>Status cd</th>-->
     <th>Status desc</th>
   </tr>
 
 <% @statuses.each do |status| %>
   <tr>
-    <td><%=h status.status_cd %></td>
+   <!--td><!--%=h status.status_cd %--></td-->
     <td><%=h status.status_desc %></td>
     <td><%= link_to 'Show', status %></td>
     <td><%= link_to 'Edit', edit_status_path(status) %></td>

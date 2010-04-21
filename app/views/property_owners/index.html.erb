@@ -1,4 +1,6 @@
 <h1>List Property Owners</h1>
+<title>Property Owners: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -8,8 +10,9 @@
 
 <% @property_owners.each do |property_owner| %>
   <tr>
-    <td><%=h property_owner.property_id %></td>
-    <td><%=h property_owner.demo_id %></td>
+    <!--td><%=h property_owner.property_id %></td-->
+    <td><%=h property_owner.property.addr %></td>
+    <td><%=h property_owner.demo.name %></td>
     <td><%= link_to 'Show', property_owner %></td>
     <td><%= link_to 'Edit', edit_property_owner_path(property_owner) %></td>
     <td><%= link_to 'Destroy', property_owner, :confirm => 'Are you sure?', :method => :delete %></td>

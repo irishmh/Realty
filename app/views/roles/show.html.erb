@@ -1,8 +1,12 @@
-<h1>Show role</h1>
+<h1>Show Roles</h1>
+<title>Roles: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <p>
   <b>Role type:</b>
-  <%=h @role.role_type_id %>
+  <!--%=h @role.role_type_id %-->
+  <%=h @role.role_type.role_type_cd %>
+
 </p>
 
 <p>

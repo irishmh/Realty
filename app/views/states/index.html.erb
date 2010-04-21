@@ -1,16 +1,26 @@
 <h1>List States</h1>
+<title>States: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
     <th>State cd</th>
+    <!--th>State Name</th-->
   </tr>
 
 <% @states.each do |state| %>
-  <tr>
-    <td><%=h state.state_cd %></td>
-    <td><%= link_to 'Show', state %></td>
-    <td><%= link_to 'Edit', edit_state_path(state) %></td>
-    <td><%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %></td>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td class="list-code">
+      <%=h state.state_cd %>
+    <!--/td>
+    <!--td class="list-description"-->
+      <!--%=h state.state_name %-->
+    <!--/td-->
+    <td class="list-actions">
+      <%= link_to 'Show', state %><br />
+      <%= link_to 'Edit', edit_state_path(state) %><br />
+      <%= link_to 'Destroy', state, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 </table>
