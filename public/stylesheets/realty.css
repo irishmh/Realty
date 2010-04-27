@@ -54,45 +54,45 @@ h1 {
   background:   #f8b0f8;
 }
 
-/* An entry in the store catalog */
+/* An entry in the property catalog */
 
-#store  .entry {
+#property  .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#property  .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#property .entry img {
   width: 75px;
   float: left;
 }
 
 
-#store .entry h3 {
+#property .entry h3 {
  margin-top: 0;
  margin-bottom: 2px;
  color: #227;
 }
 
-#store .entry p {
+#property .entry p {
  margin-top: 0.5em; 
  margin-bottom: 0.8em; 
 }
 
-#store .entry .price-line {
+#property .entry .price-line {
  clear: both;
 }
 
-#store .entry .add-to-cart {
+#property .entry .add-to-cart {
   position: relative;
 }
 
-#store .entry  .price {
+#property .entry  .price {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;

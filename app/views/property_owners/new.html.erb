@@ -7,11 +7,13 @@
 
   <p>
     <%= f.label :property_id %><br />
-    <%= f.text_field :property_id %>
+    <%= f.select(:property_id, Property.all.collect{|t| [t.addr, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
-  <p>
+  </p>
     <%= f.label :demo_id %><br />
-    <%= f.text_field :demo_id %>
+    <%= f.select(:demo_id, Demo.all.collect{|t| [t.name, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.submit 'Create' %>

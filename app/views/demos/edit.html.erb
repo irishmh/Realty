@@ -7,7 +7,8 @@
 
   <p>
     <%= f.label :role_id %><br />
-    <%= f.text_field :role_id %>
+    <%= f.select(:role_id, RoleType.all.collect{|t| [t.role_desc, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :name %><br />
@@ -23,7 +24,8 @@
   </p>
   <p>
     <%= f.label :state_id %><br />
-    <%= f.text_field :state_id %>
+    <%= f.select(:state_id, State.all.collect{|t| [t.state_cd, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :zip %><br />

@@ -7,7 +7,8 @@
 
   <p>
     <%= f.label :contact_type_id %><br />
-    <%= f.text_field :contact_type_id %>
+    <%= f.select(:contact_type_id, ContactType.all.collect{|t| [t.contact_type_desc, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :contact_data %><br />

@@ -2,12 +2,13 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.xml
   def index
-    @properties = Property.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @properties }
-    end
+    #@properties = Property.all
+    #
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.xml  { render :xml => @properties }
+    #end
+    @properties = Property.find_properties_for_sale
   end
 
   # GET /properties/1

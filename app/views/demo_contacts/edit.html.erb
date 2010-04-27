@@ -7,15 +7,17 @@
 
   <p>
     <%= f.label :demo_id %><br />
-    <%= f.text_field :demo_id %>
+    <%= f.select(:demo_id, Demo.all.collect{|t| [t.name, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :preferred_seq %><br />
     <%= f.text_field :preferred_seq %>
   </p>
   <p>
-    <%= f.label :contact_id %><br />
-    <%= f.text_field :contact_id %>
+    <%= f.label :contact_type_id %><br />
+    <%= f.select(:contact_id, Contact.all.collect{|t| [t.contact_data, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :contact_data %><br />

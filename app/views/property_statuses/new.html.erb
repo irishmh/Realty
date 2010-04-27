@@ -5,15 +5,15 @@
 <% form_for(@property_status) do |f| %>
   <%= f.error_messages %>
 
-<p>
+  <p>
     <%= f.label :property %><br />
     <%= f.select(:property_id, Property.all.collect{|t| [t.addr, t.id]}, {:include_blank => true}) %>
     </select>
   </p>
 
   <p>
-    <%= f.label :status_id %><br />
-    <%= f.text_field :status_id %>
+    <%= f.label :status %><br />
+    <%= f.select(:status_id, Status.all.collect{|t| [t.status_desc, t.id]}, {:include_blank => true}) %>
   </p>
   <p>
     <%= f.submit 'Create' %>

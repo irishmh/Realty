@@ -1,0 +1,38 @@
+<h1>Edit Property</h1>
+<title>Property: <%= controller.action_name %></title>
+<%= stylesheet_link_tag 'scaffold', 'realty' %>
+
+<% form_for(@property) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :addr %><br />
+    <%= f.text_field :addr %>
+  </p>
+  <p>
+    <%= f.label :state_id %><br />
+    <%= f.text_field :state_id %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :desc %><br />
+    <%= f.text_field :desc %>
+  </p>
+  <p>
+    <%= f.label :gps_lat %><br />
+    <%= f.text_field :gps_lat %>
+  </p>
+  <p>
+    <%= f.label :gps_lon %><br />
+    <%= f.text_field :gps_lon %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @property %> |
+<%= link_to 'Back', properties_path %>

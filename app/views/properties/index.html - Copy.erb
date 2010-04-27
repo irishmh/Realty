@@ -1,0 +1,46 @@
+<h1>List Properties</h1>
+<!--title>Properties: <!--%= controller.action_name %--><!--/title-->
+<!--%= stylesheet_link_tag 'scaffold', 'realty' %-->
+
+<div class="entry"><div class="row">Address State Zip GPS Lat GPS Long  Links...</div></div>
+<!--table>-->
+  <!--tr>-->
+  <!--th>Addr</th-->
+  <!--th>State</th-->
+  <!--th>Zip</th-->
+  <!--th>Desc</th-->
+  <!--th>Gps lat</th-->
+  <!--th>Gps lon</th-->
+  <!--tr-->
+
+<% @properties.each do |property| %>
+  <!--tr-->
+    <!--td--><!--%=h property.addr %--><!--/td>
+    <!--td--><!--%=h property.state.state_cd %--><!--/td-->
+    <!--td--><!--%=h property.state.state_name %--><!--/td-->
+    <!--td--><!--%=h property.zip %--><!--/td-->
+    <!--td--><!--%=h property.desc %--><!--/td-->
+    <!--td--><!--%=h property.gps_lat %--><!--/td-->
+    <!--td--><!--%=h property.gps_lon %--><!--/td>-->
+    <div class="entry">
+      <!--%= image_tag(product.image_url) %-->
+      <div class="row"><b><%=h property.addr %></b>
+        <!--%=h property.state.state_cd %-->
+        <!--%=h property.state.state_name %-->
+        <%=h property.zip %>
+        <%=h property.gps_lat %>
+        <%=h property.gps_lon %>
+        <%= link_to 'Show', property %>
+        <%= link_to 'Edit', edit_property_path(property) %>
+        <%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+      <div class="prop-desc"><%=h property.desc %></div>
+      <div class="price-line"><span class="price"><!--%= property.property_price.property_price %--></span></div>
+    </div><br />
+  <!--/tr-->
+<% end %>
+<!--/table-->
+
+<br />
+
+<%= link_to 'New property', new_property_path %>

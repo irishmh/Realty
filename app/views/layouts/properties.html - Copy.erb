@@ -4,9 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <!--title>Properties: <!--%= controller.action_name %--><!--/title-->
+  <!--%= stylesheet_link_tag 'scaffold' %-->
   <title>Higgins Realty - Properties Listings</title>
   <%= stylesheet_link_tag "realty" , :media => "all" %>
 </head>
+<!--body >
+
+<p style="color: green"--><!--%= flash[:notice] %--><!--/p-->
 
 <body id="property">
   <div id="banner">
@@ -19,12 +24,12 @@
       <a href="http://localhost:3000/contact_types">Contact Types</a><br /><br />
       <a href="http://localhost:3000/demos">Demographic</a><br />
       <a href="http://localhost:3000/demo_contacts">Demographic Contacts</a><br /><br />
+      <a href="http://localhost:3000/permissions">Permissions</a><br /><br />     
       <a href="http://localhost:3000/properties">Properties</a><br />
       <a href="http://localhost:3000/property_details">Property Details</a><br />
       <a href="http://localhost:3000/property_owners">Property Owners</a><br />
       <a href="http://localhost:3000/property_prices">Property Prices</a><br />
       <a href="http://localhost:3000/property_statuses">Property Status</a><br /><br />
-      <a href="http://localhost:3000/permissions">Permissions</a><br />
       <a href="http://localhost:3000/roles">Roles</a><br />
       <a href="http://localhost:3000/role_types">Role Types</a><br />
       <a href="http://localhost:3000/role_permissions">Role Permissions</a><br /><br />

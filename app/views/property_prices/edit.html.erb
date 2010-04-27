@@ -5,9 +5,10 @@
 <% form_for(@property_price) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+  </p>
     <%= f.label :property_id %><br />
-    <%= f.text_field :property_id %>
+    <%= f.select(:property_id, Property.all.collect{|t| [t.addr, t.id]}, {:include_blank => true}) %>
+    </select>
   </p>
   <p>
     <%= f.label :property_price %><br />
