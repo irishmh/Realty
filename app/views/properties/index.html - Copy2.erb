@@ -1,0 +1,32 @@
+<h1>List Properties</h1>
+
+<table>
+<% @properties.each do |property| -%>
+    <!--th>Address</th><th>State</th><th>Actions</th><th></th><th></th-->
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+        <!--td-->
+          <!--%= image_tag product.image_url, :class => 'list-image' %-->
+        <!--/td-->
+        <b><td class="list-description"><b>
+          <dl>
+            <dt><%=h property.addr %></dt>
+            <dd><%=h property.state.state_cd %></dd>
+          </dl>
+        <!--/td--></b>
+        <!--td class="list-actions"-->
+          <%= link_to 'Show', property %>
+          <%= link_to 'Edit', edit_property_path(property) %>
+          <%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %><br>
+          <div class="list-desc"><%=h property.desc %></div>
+          <div class="price-line">
+            <span class="price"><!--%= property.property_price.property_price %--></span>
+          </div>
+        </td>
+    </tr><br />
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'Add a new property', new_property_path %>

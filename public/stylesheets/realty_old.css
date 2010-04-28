@@ -1,0 +1,141 @@
+/* Global styles */
+
+h1 {
+        font:  150% sans-serif;
+        color: #226;
+        border-bottom: 3px dotted #77d;
+}
+
+/* Styles for products/index */
+
+#property-list table {
+        border-collapse: collapse;
+}
+
+#property-list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#property-list .list-image {
+  width:        60px;
+  height:       70px;
+}
+
+#property-list .list-description {
+  width:        60%;
+}
+
+#property-list .list-description dl {
+        margin: 0;
+}
+
+#property-list .list-description dt {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+#property-list .list-description dd {
+        margin: 0;
+}
+
+#property-list .list-actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#property-list .list-line-even {
+  background:   #e0f8f8;
+}
+
+#property-list .list-line-odd {
+  background:   #f8b0f8;
+}
+
+/* An entry in the property catalog */
+
+#property  .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+#property  .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+#property .entry img {
+  width: 75px;
+  float: left;
+}
+
+
+#property .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #227;
+}
+
+#property .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#property .entry .price-line {
+ clear: both;
+}
+
+#property .entry .add-to-cart {
+  position: relative;
+}
+
+#property .entry  .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+/* The error box */
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: #EEFFEE;
+  display: inline;
+}
+
+.fieldWithErrors * {
+  background-color: red;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

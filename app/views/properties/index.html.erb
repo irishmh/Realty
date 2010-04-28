@@ -1,6 +1,7 @@
 <h1>List Properties</h1>
 
 <% @properties.each do |property| -%>
+
     <div class="entry">
       <!--%= image_tag(property.pic_url) %-->
       <h3><%=h property.addr %></h3>
@@ -16,7 +17,8 @@
       <div class="price-line">
         <span class="price"><!--%= property.property_price.property_price %--></span>
       </div>
-    </div><br />
+    </div>
+    <br />
 <% end %>
 
 <br />
