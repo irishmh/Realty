@@ -12,9 +12,6 @@
   </p>
   <p>
     <%= f.label :demo_id %><br />
-    <%= f.text_field :demo_id %>
-  </p>
-    <%= f.label :demo_id %><br />
     <%= f.select(:demo_id, Demo.all.collect{|t| [t.name, t.id]}, {:include_blank => true}) %>
     </select>
   </p>
@@ -25,3 +22,5 @@
 
 <%= link_to 'Show', @property_owner %> |
 <%= link_to 'Back', property_owners_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

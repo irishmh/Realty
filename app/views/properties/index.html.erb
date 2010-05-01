@@ -4,18 +4,15 @@
 
     <div class="entry">
       <!--%= image_tag(property.pic_url) %-->
-      <h3><%=h property.addr %></h3>
-        <%=h property.state.state_cd %>
-        <!--%=h property.state.state_name %-->
-      <%=h property.zip %>
+      <b><%=h property.addr %>,&nbsp;<%=h property.state.state_cd %>&nbsp;<%=h property.zip %></b>
         <!--%=h property.gps_lat %-->
         <!--%=h property.gps_lon %-->
       <%= link_to 'Show', property %>
       <%= link_to 'Edit', edit_property_path(property) %>
-      <%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %><br />
       <%=h property.desc %>
-      <div class="price-line">
-        <span class="price"><!--%= property.property_price.property_price %--></span>
+      <div class="price-line">        
+        <span class="price"><!--%=h property.property_price.property_price if property.property_price %--></span>
       </div>
     </div>
     <br />
@@ -24,3 +21,5 @@
 <br />
 
 <%= link_to 'Add a new property', new_property_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

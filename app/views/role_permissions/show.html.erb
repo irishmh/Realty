@@ -4,26 +4,17 @@
 
 <p>
   <b>Role:</b>
-  <!--%=h @role_permission.role_id %-->
    <%=h @role_permission.role.role_desc %>
    <%=h @role_permission.permission.permission_desc %>
-  <!--%=h @select(:role_id, Role.all.collect{|t| [t.role_desc, t.id]}, {:include_blank => true}) %-->
-  <!--%=h @ = Product.find(params[:id]) %-->
-  <!--%=h @ = Role.find(params[:role_permission.role_id])%-->
-  <!--%=h @Role.role_desc %-->
-  <!--%=h @Role.find_by_id(@role_permission.role_id) %-->
-  <!--%=h @Role.find_by_sql("select role_desc from role where role_id = role_permission.role_id" ) %-->
-  <!--%=h Role.find(:all, :conditions => { :role_type_id => role_permission.role_id }) %-->
-  <!--%=h @role = Role.find(params[:id ])
-        @role.role_desc %-->
 
 </p>
 
 <p>
   <b>Permission:</b>
-  <%=h @role_permission.permission_id %>
-  <!--%=h @select(:permission_id, Permission.all.collect{|t| [t.permission_desc, t.id]}, {:include_blank => true}) %-->
+  <%=h @role_permission.permission.permission_desc %>
 </p>
 
 <%= link_to 'Edit', edit_role_permission_path(@role_permission) %> |
 <%= link_to 'Back', role_permissions_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

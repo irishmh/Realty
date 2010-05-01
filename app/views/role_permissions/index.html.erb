@@ -11,13 +11,9 @@
 <% @role_permissions.each do |role_permission| %>
   <tr>
     <td><%=h role_permission.role.role_desc %>
-        <!--%=h @id = role_permission.role_id
-             @role = Role.find(params[:id ]) 
-             @role.role_desc %-->
     </td>
     <td><%=h role_permission.permission.permission_desc %>
-         <!--%=h @permission = Permission.find(params[:id ]) 
-             @permission.permission_desc %-->
+
     </td>
     <td><%= link_to 'Show', role_permission %></td>
     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
@@ -29,3 +25,5 @@
 <br />
 
 <%= link_to 'New role_permission', new_role_permission_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

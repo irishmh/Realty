@@ -4,23 +4,29 @@
 
 <table>
   <tr>
-    <th>Property</th>
-    <th>Property price</th>
+    <th>Property Addr</th>
+    <th>Zip</th>
+    <th>Asking price</th>
+    <th>Description</th>
+    <th>Maint</th>
   </tr>
 
 <% @property_prices.each do |property_price| %>
   <tr>
-    <td><%=h property_price.property.addr %></td>
-    <td><%=h property_price.property.zip %></td>
+    <td><b><%=h property_price.property.addr %></b></td>
+    <td><b><%=h property_price.property.zip %></b></td>
+    <td><%=h property_price.property_price %></td>
     <td><%=h property_price.property.desc %></td>
-    <td><!--%=h property_price.property_price %--></td>
-    <td><%= link_to 'Show', property_price %></td>
-    <td><%= link_to 'Edit', edit_property_price_path(property_price) %></td>
-    <td><%= link_to 'Destroy', property_price, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', property_price %>
+    <br /><%= link_to 'Edit', edit_property_price_path(property_price) %>
+    <br /><%= link_to 'Destroy', property_price, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  <tr></tr>
 <% end %>
 </table>
 
 <br />
 
 <%= link_to 'New property_price', new_property_price_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

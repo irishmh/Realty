@@ -1,4 +1,4 @@
-<h1>Editing Property Price</h1>
+<h1>Edit Property Price</h1>
 <title>Property Price: <%= controller.action_name %></title>
 <%= stylesheet_link_tag 'scaffold', 'realty' %>
 
@@ -11,8 +11,8 @@
     </select>
   </p>
   <p>
-    <!--%= f.label :property_price %--><br />
-    <!--%= f.text_field :property_price %-->
+    <%= f.label :property_price %><br />
+    <%= f.text_field :property_price %>
   </p>
   <p>
     <%= f.submit 'Update' %>
@@ -21,3 +21,5 @@
 
 <%= link_to 'Show', @property_price %> |
 <%= link_to 'Back', property_prices_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>

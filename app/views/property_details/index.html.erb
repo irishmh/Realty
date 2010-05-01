@@ -4,16 +4,17 @@
 
 <table>
   <tr>
-    <th>Property</th>
-    <th>Pic</th>
-    <th>Pic seq</th>
-    <th>Pic desc</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th>Picture</th>
+    <th>Display<br />seq</th>
+    <th>Description</th>
   </tr>
 
 <% @property_details.each do |property_detail| %>
   <tr>
-    <td><%=h property_detail.property.addr %></td>
-  
+    <td><b><%=h property_detail.property.addr %></b></td>
+    <td><b><%=h property_detail.property.zip %></b></td>
     <td><!--%=h property_detail.pic %--></td>
     <td><%=h property_detail.pic_seq %></td>
     <td><%=h property_detail.pic_desc %></td>
@@ -27,3 +28,5 @@
 <br />
 
 <%= link_to 'New property_detail', new_property_detail_path %>
+<br /><br />
+<b><%= link_to 'Return to homepage...', properties_path %></b>
