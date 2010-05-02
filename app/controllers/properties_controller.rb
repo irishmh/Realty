@@ -93,7 +93,7 @@ class PropertiesController < ApplicationController
     #  format.html # index.html.erb
     #  format.xml  { render :xml => @properties }
     #end
-    redirect_to :action => "index"
+    #redirect_to :action => "index"
 
   end
 end

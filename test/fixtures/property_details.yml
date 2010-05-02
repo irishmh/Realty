@@ -1,8 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
+
 one:
   property_id: 1
-  pic: 
+  # pic: 
   pic_seq: 1
   pic_desc: MyString
   created_userid: MyString
@@ -10,7 +11,7 @@ one:
 
 two:
   property_id: 1
-  pic: 
+  # pic: 
   pic_seq: 1
   pic_desc: MyString
   created_userid: MyString
