@@ -1,4 +1,4 @@
 class RoleType < ActiveRecord::Base
-  #belongs_to :role
   has_many :roles
+  validates_presence_of :role_desc
 end
