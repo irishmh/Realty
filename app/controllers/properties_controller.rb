@@ -10,7 +10,7 @@ class PropertiesController < ApplicationController
     #end
     @properties = Property.find_properties_for_sale
   end
-
+  
   # GET /properties/1
   # GET /properties/1.xml
   def show
@@ -82,5 +82,18 @@ class PropertiesController < ApplicationController
       format.html { redirect_to(properties_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  # Named scopes
+  def new_properties
+    @properties = Property.find_properties_new_last_n_days
+    #@properties = Property.all
+    #
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.xml  { render :xml => @properties }
+    #end
+    redirect_to :action => "index"
+
   end
 end
