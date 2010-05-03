@@ -1,20 +1,20 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  addr: MyString
+property_one:
+  addr: "12345 test addr"
   state_id: 1
-  zip: 
-  desc: MyString
+  zip: 12345
+  desc: "12345 test desc"
   gps_lat: 1.5
   gps_lon: 1.5
   created_userid: MyString
   last_updt_userid: MyString
 
-two:
-  addr: MyString
+property_two:
+  addr: "23456 test addr"
   state_id: 1
-  zip: 
-  desc: MyString
+  zip: 23456
+  desc: "23456 test desc"
   gps_lat: 1.5
   gps_lon: 1.5
   created_userid: MyString
