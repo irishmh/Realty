@@ -4,19 +4,22 @@
 
 <% form_for(@property_price) do |f| %>
   <%= f.error_messages %>
-
+  <div class="entry">
   </p>
     <%= f.label :property_id %><br />
     <%= f.select(:property_id, Property.all.collect{|t| [t.addr, t.id]}, {:include_blank => true}) %>
     </select>
   </p>
   <p>
-    <%= f.label :property_price %><br />
-    <%= f.text_field :property_price %>
+    <span class="price">
+      <%= f.label :property_price %><br />
+      <%= f.text_field :property_price %>
+    </span>
   </p>
   <p>
     <%= f.submit 'Create' %>
   </p>
+  </div>
 <% end %>
 
 <%= link_to 'Back', property_prices_path %>

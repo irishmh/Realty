@@ -11,8 +11,12 @@
     </select>
   </p>
   <p>
-    <%= f.label :pic %><br />
-    <!--%= f.text_field :pic %-->
+    <%= f.label :pic_url %><br />
+    <%= f.text_field :pic_url %>
+  </p>
+  <p>
+    Picture:<br />
+    <!--%= image_tag @property_detail.pic_url, :class => 'list-image' %-->
   </p>
   <p>
     <%= f.label :pic_seq %><br />

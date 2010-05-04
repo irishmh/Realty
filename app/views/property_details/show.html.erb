@@ -7,10 +7,15 @@
   <%=h @property_detail.property.addr %>
 </p>
 
-<!--p>
-  <!--b>Pic:</b>
-  <!--%=h @property_detail.pic %-->
-<!--/p-->
+<p>
+  <b>Pic URL:</b>
+  <%=h @property_detail.pic_url %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <!--%= image_tag @property_detail.pic_url, :class => 'list-image' %-->
+</p>
 
 <p>
   <b>Pic seq:</b>

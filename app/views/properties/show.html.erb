@@ -2,6 +2,11 @@
 <title>Properties: <%= controller.action_name %></title>
 <%= stylesheet_link_tag 'scaffold', 'realty' %>
 <p>
+  <b>Pic:</b>
+  <%= image_tag @property.property_detail.pic_url, :class => 'list-image' %>
+</p>
+
+<p>
   <b>Addr:</b>
   <%=h @property.addr %>
 </p>

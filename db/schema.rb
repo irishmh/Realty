@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100330024850) do
+ActiveRecord::Schema.define(:version => 20100504035458) do
 
   create_table "contact_types", :force => true do |t|
     t.string   "contact_type_cd"
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
     t.string   "last_updt_userid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pic_url"
   end
 
   create_table "property_owners", :force => true do |t|
@@ -97,11 +98,11 @@ ActiveRecord::Schema.define(:version => 20100330024850) do
 
   create_table "property_prices", :force => true do |t|
     t.integer  "property_id"
-    t.decimal  "property_price"
     t.string   "created_userid"
     t.string   "last_updt_userid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "property_price",   :precision => 9, :scale => 2, :default => 0.0
   end
 
   create_table "property_statuses", :force => true do |t|

@@ -3,7 +3,7 @@
 <% @properties.each do |property| -%>
 
     <div class="entry">
-      <!--%= image_tag(property.pic_url) %-->
+      <!--%= image_tag property.property_detail.pic_url, :class => 'list-image' %-->
       <b><%=h property.addr %>,&nbsp;<%=h property.state.state_cd %>&nbsp;<%=h property.zip %></b>
         <!--%=h property.gps_lat %-->
         <!--%=h property.gps_lon %-->

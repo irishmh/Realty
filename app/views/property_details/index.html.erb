@@ -7,18 +7,25 @@
     <th>Picture</th>
     <th>Display<br />seq</th>
     <th>Description</th>
+    <th>Maint</th>
   </tr>
 
 <% @property_details.each do |property_detail| %>
   <tr>
     <td><b><%=h property_detail.property.addr %></b></td>
     <td><b><%=h property_detail.property.zip %></b></td>
-    <td><!--%=h property_detail.pic %--></td>
+    <td><%= image_tag property_detail.pic_url, :class => 'list-image' %></td>
     <td><%=h property_detail.pic_seq %></td>
-    <td><%=h property_detail.pic_desc %></td>
-    <td><%= link_to 'Show', property_detail %></td>
-    <td><%= link_to 'Edit', edit_property_detail_path(property_detail) %></td>
-    <td><%= link_to 'Destroy', property_detail, :confirm => 'Are you sure?', :method => :delete %></td>
+    <!--td--><!--%=h property_detail.pic_desc %--><!--/td-->
+    <td class="list-description">
+      <dl>
+        <!--dt><!--%=h product.title %--><!--/dt-->
+        <dd><%=h truncate(property_detail.pic_desc.gsub(/<.*?>/,''),
+               :length => 80) %></dd>
+        </dl>
+    <td><%= link_to 'Show', property_detail %><br />
+        <%= link_to 'Edit', edit_property_detail_path(property_detail) %><br />
+        <%= link_to 'Destroy', property_detail, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
