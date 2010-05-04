@@ -2,39 +2,46 @@
 
 h1 {
         font:  150% sans-serif;
-        color: #226;
-        border-bottom: 3px dotted #77d;
+        color: #226;    /* dk blue - hdr font */
+	border-bottom: 3px dotted #77d;
 }
 
 /* Styles for main page */
 #banner {
-  background: #9c9 ;
+  /* background: #9c9 ;  */  /* lt green */
+  background: #81BEF7 ;      /* lt blue */
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282 ;
+  /* color: #282 ; */  /* green*/
+  color: #0000FF ;     /* dk blue - banner font*/
   text-align: center;
 }
 #banner img {
   float: left;
 }
 #columns {
-  background: #141 ;
+  /* background: #141 ; */  /* inside sidebar - kelly green */
+  background: #226;         /* inside sidebar - dk blue */
 }
 #main {
   margin-left: 13em;
   padding-top: 4ex;
   padding-left: 2em;
-  background: white;
+  background: white; 
+  /* background: :#ffffff url('../images/reaty_bg.jpg') no-repeat right top; */ 
+  /* background-image: white url('../images/reaty_bg.jpg'); */
 }
 #side {
   float: left;
   padding-top: 1em;
   padding-left: 1em;
   padding-bottom: 1em;
-  width: 12em;
-  background: #141 ;
+  width: 12em; 
+  /* background: #141 ; */  /* outside sidebar kelly green */
+  background: #226;         /* outside sidebar - dk blue */
+
 }
 #side a {
   color: #bfb ;

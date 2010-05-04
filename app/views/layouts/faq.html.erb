@@ -7,11 +7,43 @@
   <title>FAQ: <%= controller.action_name %></title>
   <%= stylesheet_link_tag "realty" , :media => "all" %>
 </head>
-<body>
 
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
+<body id="faq">
+  <div id="banner">
+    <!--%= image_tag("realty_logo.jpg" ) %-->
+    <%= @page_title || "Higgins Realty" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="/contacts">Contacts</a><br />
+      <a href="/contact_types">Contact Types</a><br /><br />
+      <a href="/demos">Demographic</a><br />
+      <a href="/demo_contacts">Demographic Contacts</a><br /><br />
+      <a href="/properties">Properties - All</a><br />
+      <a href="/properties/new_properties">Properties - New</a><br />
+      <a href="/properties/new_properties">Properties - New</a><br />
+      <a href="/property_details">Property Details</a><br />
+      <a href="/property_owners">Property Owners</a><br />
+      <a href="/property_prices">Property Prices</a><br />
+      <a href="/property_statuses">Property Status</a><br /><br />
+      <a href="/permissions">Permissions</a><br />
+      <a href="/roles">Roles</a><br />
+      <a href="/role_types">Role Types</a><br />
+      <a href="/role_permissions">Role Permissions</a><br /><br />
+      <a href="/states">States</a><br /><br />
+      <a href="/statuses">Statuses</a><br /><br />
+      <a href="/properties">Home</a><br />
+      <a href="/links/faq">Questions</a><br />
+      <a href="/links/news">News</a><br />
+      <a href="/links/contacts">Contacts</a><br /><br /><br />
+      <!-- ROR LINK BEGIN -->
+        <a href="http://www.rorweb.com"><img src="http://www.rorweb.com/rorlogow.gif" width="20" height="16" border="0" alt="ROR"/></a>
+      <!-- ROR LINK END -->
+    </div>
+    <div id="main">
+      <%= yield :layout %>
+    </div>
+  </div>
 
 </body>
 </html>
