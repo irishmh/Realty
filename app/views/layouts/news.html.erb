@@ -4,11 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Higgins Realty - Contacts</title>
+  <title>News: <%= controller.action_name %></title>
   <%= stylesheet_link_tag "realty" , :media => "all" %>
 </head>
 
-<body id="contacts">
+<body id="news">
   <div id="banner">
     <!--%= image_tag("realty_logo.jpg" ) %-->
     <%= @page_title || "Higgins Realty" %>
@@ -41,29 +41,8 @@
       <!-- ROR LINK END -->
     </div>
     <div id="main">
-      <div class="entry">
-      <h1>Contacts</h1>
-      <table>
-        <tr>
-          <th>Type</th>
-          <th>Contact</th>
-          <th>Office Phone</th>
-          <th>Cell Phone</th>
-          <th>email<th>
-        </tr>
-        <tr>
-          <td>Realtor</td>
-          <td>Joanne Higgins</td>
-          <td>262-642-3651</td>
-          <td>262-745-5975</td>
-          <td><a href="mailto:irishmhyh@yahoo.com">irishmhyh@yahoo.com</a></td>
-        <tr></tr>
-      </table>
-      
-      <br /><br />
-      <b><%= link_to 'Return to homepage...', properties_path %></b>
-      </div>
-   </div>
+      <%= yield :layout %>
+    </div>
   </div>
 
 </body>

@@ -1,6 +1,4 @@
 <h1>List Statuses</h1>
-<title>Statuses: <%= controller.action_name %></title>
-<%= stylesheet_link_tag 'scaffold', 'realty' %>
 
 <table>
   <tr>
@@ -9,6 +7,7 @@
   </tr>
 
 <% @statuses.each do |status| %>
+  <div class="entry">
   <tr>
    <!--td><!--%=h status.status_cd %--></td-->
     <td><%=h status.status_desc %></td>
@@ -16,6 +15,7 @@
     <td><%= link_to 'Edit', edit_status_path(status) %></td>
     <td><%= link_to 'Destroy', status, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+  </div>
 <% end %>
 </table>
 
